@@ -1,0 +1,9 @@
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\bin\Debug\UniversityManagement.exe.config
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.csprojResolveAssemblyReference.cache
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.Properties.Resources.resources
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.csproj.GenerateResource.Cache
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\bin\Debug\UniversityManagement.exe
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\bin\Debug\UniversityManagement.pdb
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\bin\Debug\MySql.Data.dll
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.exe
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.pdb
