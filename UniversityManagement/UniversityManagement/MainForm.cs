@@ -8,78 +8,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UniversityManagement
-{
-    public partial class MainForm : Form
-    {
-        private IDbManager manager;
-        private string StudentName;
-        private DateTime StudentBirthDate;
-        private string StudentAdress;
-        private int StudentId;
+namespace UniversityManagement {
+    
+    public partial class MainForm : Form {
+        private IDbManager dbManager;
+        private int CurrentId;
+        private StudentForm AddStudentForm, ModifyStudentForm;
 
-        public MainForm(IDbManager mgr)
-        {
+        public MainForm(IDbManager dbManager) {
+            this.dbManager = dbManager;
+            AddStudentForm = new StudentForm();
+            AddStudentForm.ButtonText = "Add";
+            ModifyStudentForm = new StudentForm();
+            ModifyStudentForm.ButtonText = "Modify";
             InitializeComponent();
-            this.manager = mgr;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e) {
-
+        private void ReloadStudentsTable() {
+            StudentGridView.DataSource = dbManager.getStudentsDataTable();
         }
 
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e) {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e) {
-            string format = "yyyy-MM-dd";
-            string modifiedDateString = dateTimePicker.Value.ToString(format);
-            if (!StudentName.Equals(nameTextBox.Text) || 
-                    !StudentBirthDate.ToString(format).Equals(modifiedDateString) ||
-                    !StudentAdress.Equals(adressTextBox.Text)) {
-                manager.AlterStudent(StudentId, nameTextBox.Text, 
-                    dateTimePicker.Value.ToString("yyyy-MM-dd"),
-                    adressTextBox.Text);
-            }
-            nameTextBox.Clear();
-            dateTimePicker.Value = DateTime.Now;
-            adressTextBox.Clear();
-            StudentGridView.DataSource = manager.getStudentsDataTable();
-            ModifyBtn.Enabled = false;
-        }
-
-        private void Form1_Load(object sender, EventArgs e) {
-            StudentGridView.DataSource = manager.getStudentsDataTable();
+        private void MainForm_Load(object sender, EventArgs e) {
+            ReloadStudentsTable();
         }
 
         private void StudentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            DataTable table = (DataTable) StudentGridView.DataSource;
-            int row = e.RowIndex;
-            StudentId = int.Parse(table.Rows[row][0].ToString()); ;
-            StudentName = table.Rows[row][1].ToString();
-            nameTextBox.Text =  StudentName;
-            StudentBirthDate = DateTime.Parse(table.Rows[row][2].ToString());
-            dateTimePicker.Value = StudentBirthDate;
-            StudentAdress = table.Rows[row][3].ToString();
-            adressTextBox.Text = StudentAdress;
-            ModifyBtn.Enabled = true;
+            DataTable t = (DataTable) StudentGridView.DataSource;
+            int tmp = (int) t.Rows[e.RowIndex][0];
+            if (tmp > 0) {
+                CurrentId = tmp;
+                ModifyBtn.Enabled = DeleteBtn.Enabled = true;
+                ModifyBtn.Text = "Modify (Id = " + CurrentId.ToString() + ")";
+                DeleteBtn.Text = "Delete (Id = " + CurrentId.ToString() + ")";
+            } else {
+                ModifyBtn.Enabled = DeleteBtn.Enabled = false;
+            }
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e) {
-
+        private void DeleteBtn_Click(object sender, EventArgs e) {
+            if (!dbManager.DeleteStudent(CurrentId)) {
+                string message = "Can't delete student with ID = " + CurrentId.ToString() +
+                    ". Check if it is not enrolled into a current course.";
+                MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            ReloadStudentsTable();
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
-            manager.CloseConnection();
+        private void ModifyBtn_Click(object sender, EventArgs e) {
+            ModifyStudentForm.Show(this);
+            this.Enabled = false;
         }
 
-        private void addBtn_Click(object sender, EventArgs e) {
-            
+        private void AddBtn_Click(object sender, EventArgs e) {
+            AddStudentForm.Show(this);
+            this.Enabled = false;
         }
     }
 }

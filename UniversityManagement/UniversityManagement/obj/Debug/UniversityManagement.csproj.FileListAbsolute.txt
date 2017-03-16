@@ -17,3 +17,4 @@ C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\Univer
 C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.Properties.Resources.resources
 C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.csproj.GenerateResource.Cache
 C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.MainForm.resources
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Debug\UniversityManagement.StudentForm.resources

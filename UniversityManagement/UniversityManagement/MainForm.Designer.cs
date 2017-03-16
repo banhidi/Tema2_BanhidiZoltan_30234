@@ -1,7 +1,5 @@
-﻿namespace UniversityManagement
-{
-    partial class MainForm
-    {
+﻿namespace UniversityManagement {
+    partial class MainForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,221 +22,152 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            this.components = new System.ComponentModel.Container();
-            this.TabControl = new System.Windows.Forms.TabControl();
-            this.StudentPage = new System.Windows.Forms.TabPage();
+        private void InitializeComponent() {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.StudentGridView = new System.Windows.Forms.DataGridView();
-            this.adressTextBox = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.ModifyBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.RichTextBox();
-            this.CoursePage = new System.Windows.Forms.TabPage();
-            this.StudentToCoursePage = new System.Windows.Forms.TabPage();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.universitydatabaseDataSet = new UniversityManagement.universitydatabaseDataSet();
-            this.studentTableAdapter = new UniversityManagement.universitydatabaseDataSetTableAdapters.studentTableAdapter();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.TabControl.SuspendLayout();
-            this.StudentPage.SuspendLayout();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.universitydatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // TabControl
+            // tabControl1
             // 
-            this.TabControl.Controls.Add(this.StudentPage);
-            this.TabControl.Controls.Add(this.CoursePage);
-            this.TabControl.Controls.Add(this.StudentToCoursePage);
-            this.TabControl.Location = new System.Drawing.Point(12, 12);
-            this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(656, 331);
-            this.TabControl.TabIndex = 0;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(489, 274);
+            this.tabControl1.TabIndex = 0;
             // 
-            // StudentPage
+            // tabPage1
             // 
-            this.StudentPage.Controls.Add(this.addBtn);
-            this.StudentPage.Controls.Add(this.StudentGridView);
-            this.StudentPage.Controls.Add(this.adressTextBox);
-            this.StudentPage.Controls.Add(this.dateTimePicker);
-            this.StudentPage.Controls.Add(this.ModifyBtn);
-            this.StudentPage.Controls.Add(this.label3);
-            this.StudentPage.Controls.Add(this.label2);
-            this.StudentPage.Controls.Add(this.label1);
-            this.StudentPage.Controls.Add(this.nameTextBox);
-            this.StudentPage.Location = new System.Drawing.Point(4, 22);
-            this.StudentPage.Name = "StudentPage";
-            this.StudentPage.Padding = new System.Windows.Forms.Padding(3);
-            this.StudentPage.Size = new System.Drawing.Size(648, 305);
-            this.StudentPage.TabIndex = 0;
-            this.StudentPage.Text = "Students";
-            this.StudentPage.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.DeleteBtn);
+            this.tabPage1.Controls.Add(this.ModifyBtn);
+            this.tabPage1.Controls.Add(this.AddBtn);
+            this.tabPage1.Controls.Add(this.StudentGridView);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(481, 248);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Student";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // StudentGridView
             // 
-            this.StudentGridView.AllowUserToAddRows = false;
-            this.StudentGridView.AllowUserToDeleteRows = false;
-            this.StudentGridView.AllowUserToResizeRows = false;
+            this.StudentGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.StudentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentGridView.Location = new System.Drawing.Point(6, 138);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentGridView.DefaultCellStyle = dataGridViewCellStyle10;
+            this.StudentGridView.Location = new System.Drawing.Point(6, 6);
             this.StudentGridView.Name = "StudentGridView";
-            this.StudentGridView.Size = new System.Drawing.Size(636, 164);
-            this.StudentGridView.TabIndex = 9;
+            this.StudentGridView.ReadOnly = true;
+            this.StudentGridView.RowHeadersVisible = false;
+            this.StudentGridView.Size = new System.Drawing.Size(469, 207);
+            this.StudentGridView.TabIndex = 0;
             this.StudentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentGridView_CellContentClick);
             // 
-            // adressTextBox
+            // tabPage2
             // 
-            this.adressTextBox.Location = new System.Drawing.Point(268, 66);
-            this.adressTextBox.Name = "adressTextBox";
-            this.adressTextBox.Size = new System.Drawing.Size(179, 22);
-            this.adressTextBox.TabIndex = 8;
-            this.adressTextBox.Text = "";
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(342, 248);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Course";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker
+            // tabPage3
             // 
-            this.dateTimePicker.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker.Location = new System.Drawing.Point(268, 37);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(179, 20);
-            this.dateTimePicker.TabIndex = 7;
-            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(342, 248);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Grade";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(93, 219);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddBtn.TabIndex = 1;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // ModifyBtn
             // 
             this.ModifyBtn.Enabled = false;
-            this.ModifyBtn.Location = new System.Drawing.Point(247, 94);
+            this.ModifyBtn.Location = new System.Drawing.Point(174, 219);
             this.ModifyBtn.Name = "ModifyBtn";
-            this.ModifyBtn.Size = new System.Drawing.Size(87, 22);
-            this.ModifyBtn.TabIndex = 5;
+            this.ModifyBtn.Size = new System.Drawing.Size(114, 23);
+            this.ModifyBtn.TabIndex = 2;
             this.ModifyBtn.Text = "Modify";
             this.ModifyBtn.UseVisualStyleBackColor = true;
-            this.ModifyBtn.Click += new System.EventHandler(this.button1_Click);
+            this.ModifyBtn.Click += new System.EventHandler(this.ModifyBtn_Click);
             // 
-            // label3
+            // DeleteBtn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(220, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Adress:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(210, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Birthdate:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name:";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Location = new System.Drawing.Point(268, 6);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(179, 22);
-            this.nameTextBox.TabIndex = 0;
-            this.nameTextBox.Text = "";
-            this.nameTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // CoursePage
-            // 
-            this.CoursePage.Location = new System.Drawing.Point(4, 22);
-            this.CoursePage.Name = "CoursePage";
-            this.CoursePage.Padding = new System.Windows.Forms.Padding(3);
-            this.CoursePage.Size = new System.Drawing.Size(648, 305);
-            this.CoursePage.TabIndex = 1;
-            this.CoursePage.Text = "Courses";
-            this.CoursePage.UseVisualStyleBackColor = true;
-            // 
-            // StudentToCoursePage
-            // 
-            this.StudentToCoursePage.Location = new System.Drawing.Point(4, 22);
-            this.StudentToCoursePage.Name = "StudentToCoursePage";
-            this.StudentToCoursePage.Padding = new System.Windows.Forms.Padding(3);
-            this.StudentToCoursePage.Size = new System.Drawing.Size(648, 305);
-            this.StudentToCoursePage.TabIndex = 2;
-            this.StudentToCoursePage.Text = "Grades";
-            this.StudentToCoursePage.UseVisualStyleBackColor = true;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "student";
-            this.studentBindingSource.DataSource = this.universitydatabaseDataSet;
-            // 
-            // universitydatabaseDataSet
-            // 
-            this.universitydatabaseDataSet.DataSetName = "universitydatabaseDataSet";
-            this.universitydatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentTableAdapter
-            // 
-            this.studentTableAdapter.ClearBeforeFill = true;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(340, 94);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 23);
-            this.addBtn.TabIndex = 10;
-            this.addBtn.Text = "Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            this.DeleteBtn.Enabled = false;
+            this.DeleteBtn.Location = new System.Drawing.Point(294, 219);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(114, 23);
+            this.DeleteBtn.TabIndex = 3;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 355);
-            this.Controls.Add(this.TabControl);
+            this.ClientSize = new System.Drawing.Size(513, 298);
+            this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
-            this.Text = "Form1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.TabControl.ResumeLayout(false);
-            this.StudentPage.ResumeLayout(false);
-            this.StudentPage.PerformLayout();
+            this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StudentGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.universitydatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl TabControl;
-        private System.Windows.Forms.TabPage StudentPage;
-        private System.Windows.Forms.TabPage CoursePage;
-        private System.Windows.Forms.TabPage StudentToCoursePage;
-        private System.Windows.Forms.Button ModifyBtn;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox nameTextBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.RichTextBox adressTextBox;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView StudentGridView;
-        private universitydatabaseDataSet universitydatabaseDataSet;
-        private System.Windows.Forms.BindingSource studentBindingSource;
-        private universitydatabaseDataSetTableAdapters.studentTableAdapter studentTableAdapter;
-        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Button ModifyBtn;
+        private System.Windows.Forms.Button AddBtn;
     }
 }
-
