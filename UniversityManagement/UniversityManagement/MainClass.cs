@@ -4,12 +4,12 @@ using MySql.Data.MySqlClient;
 namespace UniversityManagement {
     public class MainClass {
 
-        public static void Main() {
+        /*public static void Main() {
             IDbManager dbManager = new DBManager("zoli", "noemi");
             dbManager.OpenConnection();
-            Console.WriteLine("{0}", dbManager.DeleteCourse(1));
+            Console.WriteLine("{0}", dbManager.ExistsStudent(1));
             dbManager.CloseConnection();
-        }
+        }*/
 
     }
 

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace UniversityManagement
 {
-    /*
+    
     static class Program
     {
         /// <summary>
@@ -17,8 +17,10 @@ namespace UniversityManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            IDbManager mgr = new DBManager("zoli", "noemi");
+            mgr.OpenConnection();
+            Application.Run(new MainForm(mgr));
         }
     }
-    */
+    
 }

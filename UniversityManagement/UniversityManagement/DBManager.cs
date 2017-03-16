@@ -69,11 +69,44 @@ namespace UniversityManagement {
             }
         }
 
+        public bool ExistsStudent(int id) {
+            MySqlDataReader reader = null;
+            try {
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "select * from Student where ID = @ID; ";
+                command.Parameters.AddWithValue("@ID", id);
+                reader = command.ExecuteReader();
+                return reader.Read();
+            } catch(Exception e) {
+                return false;
+            } finally {
+                reader.Close();
+            }
+        }
+
         public bool DeleteStudent(int id) {
             try {
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = connection;
-                command.CommandText = "delete from Student where ID = @ID; ";
+                command.CommandText = "delete from UniversityDatabase.Student where ID = @ID; ";
+                command.Parameters.AddWithValue("@ID", id);
+                command.ExecuteNonQuery();
+                return true;
+            } catch(Exception e) {
+                return false;
+            }
+        }
+
+        public bool AlterStudent(int id, string newName, string newBirthDate, string newAdress) {
+            try {
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "update Student set Name = @Name, BirthDate = @BirthDate, " +
+                    "Adress = @Adress where ID = @ID; ";
+                command.Parameters.AddWithValue("@Name", newName);
+                command.Parameters.AddWithValue("@BirthDate", newBirthDate);
+                command.Parameters.AddWithValue("@Adress", newAdress);
                 command.Parameters.AddWithValue("@ID", id);
                 command.ExecuteNonQuery();
                 return true;
@@ -115,6 +148,21 @@ namespace UniversityManagement {
             }
         }
 
+        public bool ExistsCourse(int id) {
+            MySqlDataReader reader = null;
+            try {
+                MySqlCommand command = new MySqlCommand("select * from Course where ID = @ID;", connection);
+                command.Parameters.AddWithValue("@ID", id);
+                reader = command.ExecuteReader();
+                return reader.Read();
+            } catch(Exception e) {
+                return false;
+            } finally {
+                if (reader != null)
+                    reader.Close();
+            }
+        }
+
         public bool DeleteCourse(int id) {
             try {
                 MySqlCommand command = new MySqlCommand();
@@ -129,7 +177,65 @@ namespace UniversityManagement {
             return true;
         }
 
+        public bool EnrollStudentToCourse(int studentID, int courseID) {
+            try {
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "insert into StudentToCourse(StudentID, CourseID) " +
+                    "values (@StudID, @CourseID); ";
+                command.Parameters.AddWithValue("@StudID", studentID);
+                command.Parameters.AddWithValue("@CourseID", courseID);
+                command.ExecuteNonQuery();
+                return true;
+            } catch(Exception e) {
+                return false;
+            }
+        }
 
+        public bool ExistsStudentToCourse(int studentID, int courseID) {
+            MySqlDataReader reader = null;
+            try {
+                MySqlCommand command = new MySqlCommand("select * from StudentToCourse where " +
+                    "StudentID = @SID and CourseID = @CID;", connection);
+                command.Parameters.AddWithValue("@SID", studentID);
+                command.Parameters.AddWithValue("@CID", courseID);
+                reader = command.ExecuteReader();
+                return reader.Read();
+            } catch(Exception e) {
+                return false;
+            } finally {
+                if (reader != null)
+                    reader.Close();
+            }
+        }
+
+        public bool AddGrade(int studentId, int courseId, int grade) {
+            try {
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "update StudentToCourse set Grade = @Grade " +
+                    "where StudentID = @StudentID and CourseID = @CourseID; ";
+                command.Parameters.AddWithValue("@StudentID", studentId);
+                command.Parameters.AddWithValue("@CourseID", courseId);
+                command.ExecuteNonQuery();
+            } catch(Exception e) {
+                return false;
+            }
+            return true;
+        }
+
+        public DataTable getStudentsDataTable() {
+            try {
+                DataTable dataTable = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                adapter.SelectCommand = new MySqlCommand("select ID, Name, BirthDate, Adress " + 
+                    "from Student;", connection);
+                adapter.Fill(dataTable);
+                return dataTable;
+            } catch( Exception e) {
+                return null; 
+            }
+        }
 
     }
 }

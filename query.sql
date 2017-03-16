@@ -24,3 +24,13 @@ create table StudentToCourse(
     
 insert into Student(Name, BirthDate, Adress) values
 	("Banhidi Zoltan", "1995-06-26", "Zalau, Closca 47");
+    
+insert into Course(Name, TeacherName, StudyYear) values
+	("Proiectare Software", "Mihaela Dinsoreanu", 3);
+    
+insert into StudentToCourse(StudentID, CourseID, Grade) values
+	(1, 1, 9);
+    
+update StudentToCourse 
+set Grade = 10
+where StudentID = 1 and CourseID = 1;
