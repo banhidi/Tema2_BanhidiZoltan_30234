@@ -1,0 +1,11 @@
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\bin\Release\UniversityManagement.exe.config
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Release\UniversityManagement.csprojResolveAssemblyReference.cache
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Release\UniversityManagement.MainForm.resources
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Release\UniversityManagement.StudentForm.resources
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Release\UniversityManagement.Properties.Resources.resources
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Release\UniversityManagement.csproj.GenerateResource.Cache
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\bin\Release\UniversityManagement.exe
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\bin\Release\UniversityManagement.pdb
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\bin\Release\MySql.Data.dll
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Release\UniversityManagement.exe
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagement\obj\Release\UniversityManagement.pdb

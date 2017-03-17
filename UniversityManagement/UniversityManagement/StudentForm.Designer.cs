@@ -29,7 +29,7 @@
             this.NameTextBox = new System.Windows.Forms.RichTextBox();
             this.AdressTextBox = new System.Windows.Forms.RichTextBox();
             this.birthdayTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.AddButton = new System.Windows.Forms.Button();
+            this.Button = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -85,15 +85,14 @@
             this.birthdayTimePicker.Size = new System.Drawing.Size(133, 20);
             this.birthdayTimePicker.TabIndex = 5;
             // 
-            // AddButton
+            // Button
             // 
-            this.AddButton.Location = new System.Drawing.Point(125, 160);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 6;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            this.Button.Location = new System.Drawing.Point(93, 160);
+            this.Button.Name = "Button";
+            this.Button.Size = new System.Drawing.Size(116, 23);
+            this.Button.TabIndex = 6;
+            this.Button.UseVisualStyleBackColor = true;
+            this.Button.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // CancelButton
             // 
@@ -111,7 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 236);
             this.Controls.Add(this.CancelButton);
-            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.Button);
             this.Controls.Add(this.birthdayTimePicker);
             this.Controls.Add(this.AdressTextBox);
             this.Controls.Add(this.NameTextBox);
@@ -120,6 +119,7 @@
             this.Controls.Add(this.label1);
             this.Name = "StudentForm";
             this.Text = "Add new student";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,7 +133,7 @@
         private System.Windows.Forms.RichTextBox NameTextBox;
         private System.Windows.Forms.RichTextBox AdressTextBox;
         private System.Windows.Forms.DateTimePicker birthdayTimePicker;
-        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button Button;
         private System.Windows.Forms.Button CancelButton;
     }
 }

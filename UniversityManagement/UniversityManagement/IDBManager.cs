@@ -4,23 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Collections;
 
 namespace UniversityManagement {
     public interface IDbManager {
-        bool OpenConnection();
-        void CloseConnection();
-        bool AddStudent(string name, string birthDate, string adress);
-        bool ExistsStudent(string name, string birthDate, string adress);
-        bool ExistsStudent(int id);
-        bool DeleteStudent(int id);
-        bool AlterStudent(int id, string newName, string newBirthDate, string newAdress);
-        bool AddCourse(string name, string teacherName, int studyYear);
-        bool ExistsCourse(string name);
-        bool ExistsCourse(int id);
-        bool DeleteCourse(int id);
-        bool EnrollStudentToCourse(int studentID, int courseID);
-        bool ExistsStudentToCourse(int studentID, int courseID);
-        bool AddGrade(int studentId, int courseId, int grade);
-        DataTable getStudentsDataTable();
+        bool addStudentWithoutId(Student s);
+        bool existsStudentWithoutId(Student s);
+        bool deleteStudentById(Student s);
+        bool updateStudentById(Student s);
+        bool addCourse(string name, string teacherName, int studyYear);
+        bool existsCourse(int id);
+        bool deleteCourse(int id);
+        bool enrollStudentToCourse(int studentID, int courseID);
+        bool existsStudentToCourse(int studentID, int courseID);
+        bool deleteStudentToCourse(int studentId, int courseId);
+        bool addGrade(int studentId, int courseId, int grade);
+        IList<Student> getStudents();
     }
 }

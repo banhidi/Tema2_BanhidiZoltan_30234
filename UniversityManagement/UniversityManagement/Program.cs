@@ -17,9 +17,7 @@ namespace UniversityManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            IDbManager mgr = new DBManager("zoli", "noemi");
-            mgr.OpenConnection();
-            Application.Run(new MainForm(mgr));
+            Application.Run(new MainForm());
         }
     }
     

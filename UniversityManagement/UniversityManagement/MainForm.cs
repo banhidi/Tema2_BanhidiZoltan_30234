@@ -12,56 +12,68 @@ namespace UniversityManagement {
     
     public partial class MainForm : Form {
         private IDbManager dbManager;
-        private int CurrentId;
-        private StudentForm AddStudentForm, ModifyStudentForm;
+        private Student student;       
 
-        public MainForm(IDbManager dbManager) {
-            this.dbManager = dbManager;
-            AddStudentForm = new StudentForm();
-            AddStudentForm.ButtonText = "Add";
-            ModifyStudentForm = new StudentForm();
-            ModifyStudentForm.ButtonText = "Modify";
+        public MainForm() {
+            dbManager = new MySqlDbManager();
+            student = null;
             InitializeComponent();
         }
 
-        private void ReloadStudentsTable() {
-            StudentGridView.DataSource = dbManager.getStudentsDataTable();
+        public void ReloadStudentsTable() {
+            StudentGridView.DataSource = dbManager.getStudents();
+            ModifyBtn.Enabled = false;
+            ModifyBtn.Text = "Modify";
+            DeleteBtn.Enabled = false;
+            DeleteBtn.Text = "Delete";
         }
 
         private void MainForm_Load(object sender, EventArgs e) {
             ReloadStudentsTable();
         }
 
-        private void StudentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            DataTable t = (DataTable) StudentGridView.DataSource;
-            int tmp = (int) t.Rows[e.RowIndex][0];
-            if (tmp > 0) {
-                CurrentId = tmp;
-                ModifyBtn.Enabled = DeleteBtn.Enabled = true;
-                ModifyBtn.Text = "Modify (Id = " + CurrentId.ToString() + ")";
-                DeleteBtn.Text = "Delete (Id = " + CurrentId.ToString() + ")";
-            } else {
-                ModifyBtn.Enabled = DeleteBtn.Enabled = false;
-            }
-        }
-
         private void DeleteBtn_Click(object sender, EventArgs e) {
-            if (!dbManager.DeleteStudent(CurrentId)) {
-                string message = "Can't delete student with ID = " + CurrentId.ToString() +
-                    ". Check if it is not enrolled into a current course.";
-                MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string text = "Delete student with Id=" + student.id + "?";
+            string caption = "Information";       
+            if (MessageBox.Show(text, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) 
+                    == System.Windows.Forms.DialogResult.Yes) {
+                if (!dbManager.deleteStudentById(student))
+                    MessageBox.Show("Can't delete student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ReloadStudentsTable();
             }
-            ReloadStudentsTable();
         }
 
-        private void ModifyBtn_Click(object sender, EventArgs e) {
-            ModifyStudentForm.Show(this);
-            this.Enabled = false;
+        private void showInformationMessage(string text) {
+            MessageBox.Show(text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void AddBtn_Click(object sender, EventArgs e) {
-            AddStudentForm.Show(this);
+            StudentForm studentForm = new UniversityManagement.StudentForm(this);
+            studentForm.Operation = StudentForm.OperationEnum.Add;
+            studentForm.Show(this);
             this.Enabled = false;
+        }
+
+        private void ModifyBtn_Click(object sender, EventArgs e) {
+            StudentForm studentForm = new UniversityManagement.StudentForm(this);
+            studentForm.student = student;
+            //MessageBox.Show(student.id.ToString());
+            studentForm.Operation = StudentForm.OperationEnum.Modify;            
+            //studentForm.Show(this);
+            this.Enabled = false;
+            studentForm.Show(this);
+        }
+
+        private void StudentGridView_SelectionChanged(object sender, EventArgs e) {
+            if (StudentGridView.SelectedRows.Count == 1) {
+                student = (Student)StudentGridView.SelectedRows[0].DataBoundItem;
+                //MessageBox.Show(student.id.ToString());
+                ModifyBtn.Text = "Modify (Id=" + student.id.ToString() + ")";
+                ModifyBtn.Enabled = true;
+                DeleteBtn.Text = "Delete (Id=" + student.id.ToString() + ")";
+                DeleteBtn.Enabled = true;
+            } else
+                student = null;
         }
     }
 }
