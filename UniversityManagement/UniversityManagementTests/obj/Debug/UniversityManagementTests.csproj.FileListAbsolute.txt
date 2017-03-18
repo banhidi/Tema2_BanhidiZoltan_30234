@@ -1,0 +1,11 @@
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\UniversityManagementTests.dll
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\UniversityManagementTests.pdb
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\UniversityManagement.exe
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\MySql.Data.dll
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\UniversityManagement.pdb
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\obj\Debug\UniversityManagementTests.csprojResolveAssemblyReference.cache
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\obj\Debug\UniversityManagementTests.dll
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\obj\Debug\UniversityManagementTests.pdb
+C:\Users\banhidi\Desktop\An3Sem2\PS\LabPS\Tema2\Tema2_BanhidiZoltan_30234\UniversityManagement\UniversityManagementTests\bin\Debug\UniversityManagementTests.dll.config
